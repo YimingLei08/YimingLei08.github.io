@@ -1,0 +1,356 @@
+<!doctype html>
+<!--
+  编辑指南
+  1. 修改标签之间的文字即可，例如 <h1>你的姓名</h1>。
+  2. href="..." 是链接地址；src="..." 是图片路径。
+  3. 修改后按 Ctrl+S 保存，再刷新浏览器查看效果。
+  4. 字体、颜色和间距在 assets/css/minimal-light-preview.css 中调整。
+  5. 下方中文注释仅帮助编辑，不会显示在网页上。
+-->
+<html lang="en">
+  <!-- 网页设置：浏览器标题、搜索摘要和样式文件 -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Yiming Lei | University of Toronto</title>
+    <meta
+      name="description"
+      content="Yiming Lei — Postdoctoral Fellow at the University of Toronto. Computational rock mechanics, Finite-discrete element method (FDEM), rock engineering ."
+    />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="assets/css/minimal-light-preview.css" />
+  </head>
+  <body>
+    <a class="skip" href="#about">Skip to content</a>
+    <div class="wrapper">
+      <!-- 左侧个人资料：头像、姓名、职位、单位、邮箱和 GitHub -->
+      <aside class="profile">
+        <a href="#about" aria-label="Yiming Lei, home">
+          <div class="portrait">
+            <img src="images/profile.jpg" alt="Yiming Lei outdoors on campus" />
+          </div>
+        </a>
+        <h1>Yiming Lei</h1>
+        <p class="position">Postdoctoral Fellow</p>
+        <p class="affiliation">
+          Department of Civil &amp;
+          <br />
+          Mineral Engineering
+          <br />
+          <strong>University of Toronto</strong>
+        </p>
+        <a class="email" href="mailto:yiming.lei@utoronto.ca">yiming.lei@utoronto.ca</a>
+        <!-- 学术与社交主页：修改 href 中的地址即可更新链接。 -->
+        <div class="social">
+          <a href="https://github.com/YimingLei08">GitHub ↗</a>
+          <a href="https://www.researchgate.net/profile/Yiming-Lei-13?ev=hdr_xprf">ResearchGate ↗</a>
+          <a href="https://www.linkedin.com/in/yiming-lei-620188375/">LinkedIn ↗</a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=D0OFOe0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">
+            Google Scholar ↗
+          </a>
+        </div>
+
+      </aside>
+      <main>
+        <!-- 01 · 个人简介：每个 p 标签是一段文字 -->
+        <section id="about">
+          <h2>About Me</h2>
+          <p>
+            I am a Postdoctoral Fellow in the Department of Civil &amp; Mineral Engineering at the
+            <strong>University of Toronto</strong>
+            , working with Prof. Giovanni Grasselli. My research develops efficient
+            continuum–discontinuum numerical methods for deep rock mechanics and rock engineering,
+            together with data-driven and multi-scale models of rock deformation and failure.
+          </p>
+          <p>
+            I received my Ph.D. in Geotechnical Engineering from
+            <strong>Wuhan University</strong>
+            in 2025, advised by Prof. Quansheng Liu. My doctoral research developed a
+            three-dimensional GPU-parallelized FDEM framework and coupled it with multibody dynamics
+            to investigate TBM–rock interaction and segmental lining failure.
+          </p>
+        </section>
+
+        <!-- 02 · 研究方向：每个 li 标签是一条研究方向 -->
+        <section id="research">
+          <h2>Research Interests</h2>
+          <ul class="interests">
+            <li>
+              <strong>Computational rock mechanics</strong>
+            </li>
+            <li>
+              <strong>Tunnelling engineering, Tunnel boring machine (TBM) </strong>
+           
+            </li>
+            <li>
+              <strong>Machine learning-enabled rock mechanics</strong>
+            </li>
+          </ul>
+        </section>
+
+
+        <!-- 04 · 论文列表：每个 li 区块是一篇论文；标题链接和 DOI 按钮需一起更新 -->
+        <section id="publications">
+          <div class="section-heading"><h2>Publications</h2></div>
+          <ol class="papers">
+            <!-- 论文字段：h3 为标题，authors 为作者，venue 为期刊信息，paper-link 为 DOI 链接。 -->
+            <li>
+              <h3>
+                <a href="https://doi.org/10.1016/j.tust.2026.107846">
+                  Damage and fracture analysis of segmental linings under TBM&ndash;segment
+                  interaction based on 3D GPU-FDEM.
+                </a>
+              </h3>
+              <p class="authors">
+                <span class="me">Lei Y.</span>
+                , Liu Q., Sun L., et al. (2026)
+              </p>
+              <p class="venue">Tunnelling and Underground Space Technology, 176, 107846.</p>
+              <a class="paper-link" href="https://doi.org/10.1016/j.tust.2026.107846">DOI ↗</a>
+            </li>
+            <li>
+              <h3>
+                <a href="https://doi.org/10.1016/j.tust.2026.107515">
+                  A 3D coupled multibody dynamics (MBD)&ndash;FDEM framework with GPGPU
+                  parallelization for simulating TBM&ndash;ground interaction and orientation
+                  behavior.
+                </a>
+              </h3>
+              <p class="authors">
+                <span class="me">Lei Y.</span>
+                , Liu Q., Liu H., et al. (2026)
+              </p>
+              <p class="venue">Tunnelling and Underground Space Technology, 172, 107515.</p>
+              <a class="paper-link" href="https://doi.org/10.1016/j.tust.2026.107515">DOI ↗</a>
+            </li>
+            <li>
+              <h3>
+                <a href="https://doi.org/10.1139/cgj-2025-0670">
+                  Rock mass grade recognition of TBM tunnel based on multi-feature extraction,
+                  compression, and LightGBM.
+                </a>
+              </h3>
+              <p class="authors">
+                Zhou Y., Xu S., Yang X., Yu H.*, Pan Y.,
+                <span class="me">Lei Y.*</span>
+                (2026)
+              </p>
+              <p class="venue">Canadian Geotechnical Journal, 63, 1&ndash;19.</p>
+              <a class="paper-link" href="https://doi.org/10.1139/cgj-2025-0670">DOI ↗</a>
+            </li>
+            <li>
+              <h3>
+                <a href="https://doi.org/10.1016/j.compgeo.2024.107031">
+                  Developing a memory-efficient GPGPU-parallelized contact detection algorithm for
+                  3D engineering-scale FDEM simulations.
+                </a>
+              </h3>
+              <p class="authors">
+                <span class="me">Lei Y.</span>
+                , Liu Q., Liu H., et al. (2025)
+              </p>
+              <p class="venue">Computers and Geotechnics, 179, 107031.</p>
+              <a class="paper-link" href="https://doi.org/10.1016/j.compgeo.2024.107031">DOI ↗</a>
+            </li>
+            <li>
+              <h3>
+                <a href="https://doi.org/10.1016/j.engfailanal.2025.109498">
+                  3D GPU-accelerated FDEM for fracturing and stability analysis of jointed rock
+                  masses due to tunnel excavation.
+                </a>
+              </h3>
+              <p class="authors">
+                Zhang J.,
+                <span class="me">Lei Y.*</span>
+                , Liu Y.*, et al. (2025)
+              </p>
+              <p class="venue">Engineering Failure Analysis, 174, 109498.</p>
+              <a class="paper-link" href="https://doi.org/10.1016/j.engfailanal.2025.109498">
+                DOI ↗
+              </a>
+            </li>
+            <li>
+              <h3>
+                <a href="https://doi.org/10.1016/j.tust.2024.105782">
+                  An enhanced polar-based GPGPU-parallelized contact detection algorithm for 3D FDEM
+                  and its application to cracking analysis of shield tunnel segmental linings.
+                </a>
+              </h3>
+              <p class="authors">
+                <span class="me">Lei Y.</span>
+                , Yang X., Liu Q., et al. (2024)
+              </p>
+              <p class="venue">Tunnelling and Underground Space Technology, 148, 105782.</p>
+              <a class="paper-link" href="https://doi.org/10.1016/j.tust.2024.105782">DOI ↗</a>
+            </li>
+          </ol>
+
+          <!-- 折叠显示的其他论文：增删论文后，请同步修改 summary 中的数量 -->
+          <details>
+            <summary>Show 6 more journal articles</summary>
+            <ol class="papers more" start="7">
+              <li>
+                <h3>
+                  <a href="https://doi.org/10.1016/j.engfracmech.2024.109857">
+                    An efficient Kriging-based calibration framework for FDEM.
+                  </a>
+                </h3>
+                <p class="authors">
+                  <span class="me">Lei Y.</span>
+                  , Liu Q., Wen J., et al. (2024)
+                </p>
+                <p class="venue">Engineering Fracture Mechanics, 296, 109857.</p>
+                <a class="paper-link" href="https://doi.org/10.1016/j.engfracmech.2024.109857">
+                  DOI ↗
+                </a>
+              </li>
+              <li>
+                <h3>
+                  <a href="https://doi.org/10.1016/j.compgeo.2023.105837">
+                    An updated Lagrangian framework with quadratic element formulations for FDEM.
+                  </a>
+                </h3>
+                <p class="authors">
+                  <span class="me">Lei Y.</span>
+                  , Liu Q., Liu H., et al. (2023)
+                </p>
+                <p class="venue">Computers and Geotechnics, 164, 105837.</p>
+                <a class="paper-link" href="https://doi.org/10.1016/j.compgeo.2023.105837">DOI ↗</a>
+              </li>
+              <li>
+                <h3>
+                  <a href="https://doi.org/10.1007/s11440-023-01850-3">
+                    Development and application of a novel probabilistic back-analysis framework for
+                    geotechnical parameters in shield tunneling based on the surrogate model and
+                    Bayesian theory.
+                  </a>
+                </h3>
+                <p class="authors">
+                  Liu Q.,
+                  <span class="me">Lei Y.</span>
+                  , Yin X., et al. (2023)
+                </p>
+                <p class="venue">Acta Geotechnica, 18, 4899&ndash;4921.</p>
+                <a class="paper-link" href="https://doi.org/10.1007/s11440-023-01850-3">DOI ↗</a>
+              </li>
+              <li>
+                <h3>
+                  <a href="https://doi.org/10.1016/j.enganabound.2025.106291">
+                    A novel hybrid contact detection algorithm for 2D FDEM: balancing efficiency and
+                    memory consumption.
+                  </a>
+                </h3>
+                <p class="authors">
+                  Liu H., Zhu P., Liu Q., Tian Y.,
+                  <span class="me">Lei Y.</span>
+                  , et al. (2025)
+                </p>
+                <p class="venue">Engineering Analysis with Boundary Elements, 178, 106291.</p>
+                <a class="paper-link" href="https://doi.org/10.1016/j.enganabound.2025.106291">
+                  DOI ↗
+                </a>
+              </li>
+              <li>
+                <h3>
+                  <a href="https://doi.org/10.1007/s00603-024-04218-5">
+                    GPGPU-parallelized data-driven hierarchical multiscale 3D FDEM for rock
+                    meso&ndash;macro numerical simulation.
+                  </a>
+                </h3>
+                <p class="authors">
+                  Zhao R., Wu Z., Xu X., Li M.,
+                  <span class="me">Lei Y.</span>
+                  (2024)
+                </p>
+                <p class="venue">Rock Mechanics and Rock Engineering, 58, 1503&ndash;1528.</p>
+                <a class="paper-link" href="https://doi.org/10.1007/s00603-024-04218-5">DOI ↗</a>
+              </li>
+              <li>
+                <h3>
+                  <a href="https://doi.org/10.1016/j.jrmge.2023.08.002">
+                    Anisotropic shearing mechanism of Kangding slate: experimental investigation and
+                    numerical analysis.
+                  </a>
+                </h3>
+                <p class="authors">
+                  Liu P., Liu Q., Deng P., Pan Y.,
+                  <span class="me">Lei Y.</span>
+                  , et al. (2024)
+                </p>
+                <p class="venue">
+                  Journal of Rock Mechanics and Geotechnical Engineering, 16, 1487&ndash;1504.
+                </p>
+                <a class="paper-link" href="https://doi.org/10.1016/j.jrmge.2023.08.002">DOI ↗</a>
+              </li>
+            </ol>
+          </details>
+        </section>
+
+        <!-- 投稿中论文：仅列稿件信息；录用或发表后再更新状态及 DOI。 -->
+        <section id="submitted">
+          <h2>Submitted Manuscripts</h2>
+          <ol class="papers">
+            <li>
+              <h3>
+                Symmetric boundary-represented contact model for the combined
+                finite–discrete element method.
+              </h3>
+              <p class="authors">
+                <span class="me">Lei Y.</span>, Liu H., Liu Q., Sun L., Grasselli G.
+              </p>
+              <p class="venue">
+                Submitted.
+              </p>
+            </li>
+            <li>
+              <h3>
+                Massively parallel finite–discrete element method (FDEM) on a single GPU.
+              </h3>
+              <p class="authors">
+                <span class="me">Lei Y.</span>, Liu H., Sun L., Liu Q., Grasselli G.
+              </p>
+              <p class="venue">
+                Submitted.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 05 · 教育经历：学校、学位和起止年份 -->
+        <section id="education">
+          <h2>Education</h2>
+          <ul class="education">
+            <li>
+              <div>
+                <strong>Wuhan University</strong>
+                <span>Ph.D. in Geotechnical Engineering</span>
+              </div>
+              <time>2022–2025</time>
+            </li>
+            <li>
+              <div>
+                <strong>Central South University</strong>
+                <span>M.S. in Civil Engineering</span>
+              </div>
+              <time>2018–2021</time>
+            </li>
+            <li>
+              <div>
+                <strong>China University of Geosciences (Wuhan)</strong>
+                <span>B.S. in Civil Engineering</span>
+              </div>
+              <time>2014–2018</time>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 页脚：署名、设计参考和返回顶部链接 -->
+        <footer>
+          © Yiming Lei · Design inspired by
+          <a href="https://minimal-light-theme.yliu.me/">Minimal Light</a>
+          <a class="back-top" href="#about">Back to top ↑</a>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
