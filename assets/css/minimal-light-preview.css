@@ -2,3 +2,21 @@
 /* 学术主页链接：自动换行，避免左侧栏溢出。 */
 .social { flex-wrap: wrap; gap: 8px 18px; }
 .social a { white-space: nowrap; }
+
+/* 照片取景：竖向矩形，保留下方画面并裁掉部分顶部背景。 */
+.portrait {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 644 / 786;
+  border-radius: 0;
+}
+.portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
