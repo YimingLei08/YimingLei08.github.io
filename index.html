@@ -18,40 +18,55 @@
       content="Yiming Lei — Postdoctoral Fellow at the University of Toronto. Computational rock mechanics, Finite-discrete element method (FDEM), rock engineering ."
     />
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="assets/css/minimal-light-preview.css?v=a8b3b97a" />
+    <link rel="stylesheet" href="assets/css/minimal-light-preview.css?v=c3d1f205" />
+    <script>document.documentElement.className = "js";</script>
   </head>
   <body>
-    <a class="skip" href="#about">Skip to content</a>
-    <div class="wrapper">
-      <!-- 左侧个人资料：头像、姓名、职位、单位、邮箱和 GitHub -->
-      <aside class="profile">
-        <a href="#about" aria-label="Yiming Lei, home">
-          <div class="portrait">
-            <img src="images/profile.jpg?v=ec4cce21" alt="Yiming Lei outdoors on campus" />
-          </div>
-        </a>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- 顶部导航栏：右上角的页面链接；增加页面时同步修改下方 VIEWS 列表 -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#home">Yiming Lei</a>
+        <nav aria-label="Main">
+          <a href="#home">Home</a>
+          <a href="#publications">Publications</a>
+          <a href="#education">Education</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- 页首横幅：姓名、职位和单位 -->
+    <div class="hero">
+      <div class="hero-inner">
         <h1>Yiming Lei</h1>
         <p class="position">Postdoctoral Fellow</p>
         <p class="affiliation">
-          Department of Civil &amp;
-          <br />
-          Mineral Engineering
-          <br />
+          Department of Civil &amp; Mineral Engineering,
           <strong>University of Toronto</strong>
         </p>
-        <a class="email" href="mailto:yiming.lei@utoronto.ca">yiming.lei@utoronto.ca</a>
-        <!-- 学术与社交主页：修改 href 中的地址即可更新链接。 -->
-        <div class="social">
-          <a href="https://github.com/YimingLei08">GitHub ↗</a>
-          <a href="https://www.researchgate.net/profile/Yiming-Lei-13?ev=hdr_xprf">ResearchGate ↗</a>
-          <a href="https://www.linkedin.com/in/yiming-lei-620188375/">LinkedIn ↗</a>
-          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=D0OFOe0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">
-            Google Scholar ↗
-          </a>
-        </div>
+      </div>
+    </div>
 
-      </aside>
-      <main>
+    <main id="main" class="wrapper">
+      <!-- 页面一 · Home：左侧照片与链接，右侧简介与研究方向 -->
+      <div id="view-home" class="view home">
+        <aside class="profile">
+          <div class="portrait">
+            <img src="images/profile.png?v=0916" alt="Yiming Lei outdoors on campus" />
+          </div>
+          <a class="email" href="mailto:yiming.lei@utoronto.ca">yiming.lei@utoronto.ca</a>
+          <!-- 学术与社交主页：修改 href 中的地址即可更新链接。 -->
+          <div class="social">
+            <a href="https://github.com/YimingLei08">GitHub ↗</a>
+            <a href="https://www.researchgate.net/profile/Yiming-Lei-13?ev=hdr_xprf">ResearchGate ↗</a>
+            <a href="https://www.linkedin.com/in/yiming-lei-620188375/">LinkedIn ↗</a>
+            <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=D0OFOe0AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">
+              Google Scholar ↗
+            </a>
+          </div>
+        </aside>
+        <div class="home-text">
         <!-- 01 · 个人简介：每个 p 标签是一段文字 -->
         <section id="about">
           <h2>About Me</h2>
@@ -84,11 +99,14 @@
             </li>
           </ul>
         </section>
+        </div>
+      </div>
 
-
+      <!-- 页面二 · Publications -->
+      <div id="view-publications" class="view">
         <!-- 04 · 论文列表：每个 li 区块是一篇论文；标题链接和 DOI 按钮需一起更新 -->
-        <section id="publications">
-          <div class="section-heading"><h2>Publications</h2></div>
+        <section id="journal">
+          <div class="section-heading"><h2>Journal Articles</h2></div>
           <ol class="papers">
             <!-- 论文字段：h3 为标题，authors 为作者，venue 为期刊信息，paper-link 为 DOI 链接。 -->
             <li>
@@ -312,9 +330,12 @@
             </li>
           </ol>
         </section>
+      </div>
 
+      <!-- 页面三 · Education -->
+      <div id="view-education" class="view">
         <!-- 05 · 教育经历：学校、学位和起止年份 -->
-        <section id="education">
+        <section>
           <h2>Education</h2>
           <ul class="education">
             <li>
@@ -340,14 +361,39 @@
             </li>
           </ul>
         </section>
+      </div>
 
-        <!-- 页脚：署名、设计参考和返回顶部链接 -->
-        <footer>
-          © Yiming Lei · Design inspired by
-          <a href="https://minimal-light-theme.yliu.me/">Minimal Light</a>
-          <a class="back-top" href="#about">Back to top ↑</a>
-        </footer>
-      </main>
-    </div>
+      <!-- 页脚：署名和返回顶部链接 -->
+      <footer>
+        © Yiming Lei
+        <a class="back-top" href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+
+    <!-- 页面切换：点击导航只显示对应页面；禁用 JavaScript 时全部显示 -->
+    <script>
+      (function () {
+        var VIEWS = ["home", "publications", "education"];
+        var links = document.querySelectorAll(".topbar a");
+        function show() {
+          var id = location.hash.slice(1);
+          if (VIEWS.indexOf(id) < 0) id = "home";
+          VIEWS.forEach(function (v) {
+            document.getElementById("view-" + v).classList.toggle("active", v === id);
+          });
+          links.forEach(function (a) {
+            if (a.getAttribute("href") === "#" + id) a.setAttribute("aria-current", "page");
+            else a.removeAttribute("aria-current");
+          });
+          window.scrollTo(0, 0);
+        }
+        document.querySelector(".back-top").addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        window.addEventListener("hashchange", show);
+        show();
+      })();
+    </script>
   </body>
 </html>
