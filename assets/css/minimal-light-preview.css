@@ -107,6 +107,7 @@ summary { color: var(--accent); cursor: pointer; font-size: 14px; width: fit-con
 }
 .education li:first-child { padding-top: 0; }
 .education span { display: block; color: #444; }
+.education .advisor { color: var(--muted); font-size: 14px; }
 .education time { white-space: nowrap; color: var(--muted); font-size: 14px; padding-top: 2px; }
 
 footer { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 40px; font-size: 12px; color: #888; }
